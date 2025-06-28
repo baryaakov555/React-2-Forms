@@ -4,48 +4,22 @@ import "./style.css";
 import AddBook from "./components/AddBook";
 import BookList from "./components/BookList";
 
-
-
 const App = () => {
 
 const [books, setBooks] = useState([]);
 
+const handleAddBook = (newBook) => {
+  console.log(newBook);
 
-const AddBook = () => {
-
-
-
-setBooks()
-
+  setBooks([...books, newBook])
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <div className="app">
-      <h1 className="title">React Forms! 📝</h1>
-      <AddBook AddBook = {AddBook}/>
-      <BookList />
-      <form>
-        <input type="text"></input>
-        <button type="submit">Add Book</button>
-
-      </form>
+      <h1 className="title">Book World!</h1>
+      <AddBook onAddBook = {handleAddBook}/>
+      <BookList books = {books}/>
+ 
     </div>
   );
 };
