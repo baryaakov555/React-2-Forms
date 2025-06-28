@@ -13,8 +13,26 @@ import React from "react";
  * - isFavorite (boolean, default false)
  */
 
-const AddBook = () => {
-  return <div>AddBook</div>;
+const AddBook = ({AddBook}) => {
+
+
+
+
+
+
+
+
+
+
+
+  return(
+  <div>
+    <button onClick={AddBook}>AddBook</button>
+
+
+
+  </div>
+  );
 };
 
 export default AddBook;
